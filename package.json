@@ -1,6 +1,6 @@
 {
 	"name": "rn-design-system-practice-mono",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"description": "Practice React Native Design System with multiple component libraries",
 	"private": true,
 	"repository": {
@@ -22,7 +22,8 @@
 		"dev": "turbo run dev",
 		"lint": "turbo run lint",
 		"format": "prettier --write \"**/*.{ts,tsx,md}\"",
-		"cleaner": "yarn workspace utils run clear-packages"
+		"cleaner": "yarn workspace utils run clear-packages",
+		"typecheck": "tsc --noEmit"
 	},
 	"devDependencies": {
 		"@turbo/gen": "^1.9.7",
@@ -46,5 +47,16 @@
 		"typescript": "^5.0.4",
 		"webpack": "^5.84.0"
 	},
-	"packageManager": "yarn@3.5.1"
+	"packageManager": "yarn@3.5.1",
+	"publishConfig": {
+		"registry": "https://registry.npmjs.org/"
+	},
+	"peerDependencies": {
+		"react": ">=17.0.0",
+		"react-native": ">=0.71.3",
+		"react-native-web": "*"
+	},
+	"engines": {
+		"node": ">= 18.0.0"
+	}
 }

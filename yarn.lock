@@ -11310,6 +11310,10 @@ __metadata:
     typescript: ^5.0.4
     webpack: ^5.84.0
     webpack-cli: ^5.1.1
+  peerDependencies:
+    react: ">17.0.0"
+    react-native: "*"
+    react-native-web: "*"
   languageName: unknown
   linkType: soft
 

@@ -9,7 +9,7 @@
 
 ### Packages:
 - `@teatez-design-system/core`: core React Native component library share by `native` and `web` applications
-- `@teatez-design-system/components`: core components
+- `@teatez-design-system/components`: Components
 - `@teatez-design-system/icons`: Iconography
 - `@teatez-design-system/typography`: Typography
 - `@teatez-design-system/tokens`: Design Tokens
@@ -54,5 +54,7 @@ To develop all apps and packages, run the following command:
 cd rn-design-system-practice-mono
 yarn run dev
 ```
+### Utils
 
+- `@teatez/utils` **Monorepo cleaner**: removes all node_modules, libs/, dists/, storybook-static and other bundlers to allow for a clean build in all apps and packages. 
 ### Deploy
