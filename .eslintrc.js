@@ -10,4 +10,9 @@ module.exports = {
       rootDir: ["packages/*"]
     }
   },
+  ignorePatterns:
+    [
+      "node_modules/",
+      "lib/"
+    ],
 };

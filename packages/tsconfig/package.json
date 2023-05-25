@@ -1,9 +1,16 @@
 {
-  "name": "tsconfig",
-  "version": "0.0.0",
-  "private": true,
-  "license": "MIT",
-  "publishConfig": {
-    "access": "public"
-  }
+	"name": "tsconfig",
+	"version": "0.0.1",
+	"private": true,
+	"license": "MIT",
+	"publishConfig": {
+		"access": "public"
+	},
+	"files": [
+		"base.json",
+		"nextjs.json",
+		"react-library.json",
+		"react-native-library.json"
+	],
+	"packageManager": "yarn@3.5.1"
 }

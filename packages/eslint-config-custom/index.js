@@ -2,7 +2,8 @@ module.exports = {
   extends: [
       "next",
       "turbo",
-      "prettier"
+      "prettier",
+			"@react-native-community",
   ],
   plugins: [
     "prettier"

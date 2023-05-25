@@ -1,0 +1,33 @@
+{
+	"name": "storybook-mobile",
+	"version": "1.0.0",
+	"description": "Storybook preview mobile application",
+	"main": "node_modules/expo/AppEntry.js",
+	"private": true,
+	"installConfigs": {
+		"hoistingLimits": "workspaces"
+	},
+	"scripts": {
+		"start": "expo start",
+		"android": "expo start --android",
+		"ios": "expo start --ios",
+		"web": "expo start --web",
+		"lint": "eslint \"**/*.{js,jsx,ts,tsx}\""
+	},
+	"dependencies": {
+		"@teatez/design-system": "workspace:*",
+		"expo": "~48.0.15",
+		"expo-status-bar": "~1.4.4",
+		"react": "18.2.0",
+		"react-dom": "^18.2.0",
+		"react-native": "0.71.8",
+		"react-native-web": "^0.19.4"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.20.0",
+		"@types/react-dom": "^18.0.7",
+		"eslint-config-custom": "workspace:*",
+		"tsconfig": "workspace:*"
+	},
+	"packageManager": "yarn@3.5.1"
+}
