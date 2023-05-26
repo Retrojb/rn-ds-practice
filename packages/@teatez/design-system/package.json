@@ -8,7 +8,7 @@
 	"react-native": "src/index",
 	"source": "src/index",
 	"scripts": {
-		"build": "bob prepare",
+		"build": "bob build",
 		"lint": "eslint \"**/*.{js,ts,tsx}\""
 	},
 	"devDependencies": {
@@ -23,7 +23,13 @@
 		"output": "lib",
 		"targets": [
 			"commonjs",
-			"module"
+			"module",
+			[
+				"typescript",
+				{
+					"tsc": "../../node_modules/.bin/tsc"
+				}
+			]
 		]
 	},
 	"packageManager": "yarn@3.5.1"

@@ -41,7 +41,6 @@ yarn-error.log*
 
 # STORYBOOK
 storybook-static/
-storybook.requires.js
 
 # EXPO / REACT NATIVE
 .expo/

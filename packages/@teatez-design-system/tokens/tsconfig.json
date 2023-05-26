@@ -1,5 +1,9 @@
 {
-  "extends": "tsconfig/react-library.json",
-  "include": ["."],
-  "exclude": ["dist", "build", "node_modules"]
+	"extends": "tsconfig/react-library.json",
+	"compilerOptions": {
+		"outDir": "./lib/typescript",
+		"resolveJsonModule": true
+	},
+	"include": ["."],
+	"exclude": ["dist", "build", "lib", "node_modules"]
 }

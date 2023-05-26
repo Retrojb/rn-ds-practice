@@ -1,7 +1,7 @@
 {
-	"name": "@teatez-design-system/core",
+	"name": "@teatez-design-system/typography",
 	"version": "0.0.1",
-	"description": "Example Core Design System Theme Library",
+	"description": "Typography",
 	"main": "lib/commonjs/index.js",
 	"module": "lib/module/index.js",
 	"react-native": "src/index.ts",
@@ -13,11 +13,9 @@
 	"license": "UNLICESEND",
 	"private": true,
 	"scripts": {
-		"build": "bob build",
-		"lint": "eslint \"**/*.{js,ts,tsx}\""
+		"build": "bob build"
 	},
-	"devDependencies": {
-		"@teatez-design-system/icons": "workspace:*",
+	"dependencies": {
 		"@teatez-design-system/tokens": "workspace:*",
 		"@types/react": "^18.0.22",
 		"eslint": "^7.32.0",
@@ -25,6 +23,9 @@
 		"react": "^18.2.0",
 		"tsconfig": "workspace:*",
 		"typescript": "5.0.4"
+	},
+	"publishConfig": {
+		"access": "public"
 	},
 	"react-native-builder-bob": {
 		"source": "src",

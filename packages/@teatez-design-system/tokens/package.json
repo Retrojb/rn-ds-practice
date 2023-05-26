@@ -33,7 +33,12 @@
 				}
 			],
 			"module",
-			"typescript"
+			[
+				"typescript",
+				{
+					"tsc": "../../../node_modules/.bin/tsc"
+				}
+			]
 		]
 	},
 	"packageManager": "yarn@3.5.1"

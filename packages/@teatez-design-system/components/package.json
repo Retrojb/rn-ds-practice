@@ -1,7 +1,7 @@
 {
-	"name": "@teatez-design-system/core",
+	"name": "@teatez-design-system/components",
 	"version": "0.0.1",
-	"description": "Example Core Design System Theme Library",
+	"description": "Components",
 	"main": "lib/commonjs/index.js",
 	"module": "lib/module/index.js",
 	"react-native": "src/index.ts",
@@ -16,8 +16,7 @@
 		"build": "bob build",
 		"lint": "eslint \"**/*.{js,ts,tsx}\""
 	},
-	"devDependencies": {
-		"@teatez-design-system/icons": "workspace:*",
+	"dependencies": {
 		"@teatez-design-system/tokens": "workspace:*",
 		"@types/react": "^18.0.22",
 		"eslint": "^7.32.0",

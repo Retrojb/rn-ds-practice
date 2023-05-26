@@ -1,6 +1,6 @@
 {
 	"name": "@teatez-design-system/icons",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "Icons",
 	"main": "lib/commonjs/index.js",
 	"module": "lib/module/index.js",
@@ -11,13 +11,23 @@
 		"src/"
 	],
 	"license": "UNLICESEND",
-	"private": true,
+	"publishConfig": {
+		"access": "public"
+	},
 	"scripts": {
 		"build": "bob build",
 		"lint": "eslint \"**/*.{js,ts,tsx}\""
 	},
 	"devDependencies": {
+		"@svgr/core": "^8.0.0",
+		"@types/eslint": "^8",
+		"@types/react": "^18.2.7",
+		"@types/react-native": "^0.72.1",
+		"eslint": "^8.41.0",
 		"eslint-config-custom": "workspace:*",
+		"react-native-svg": "^13.9.0",
+		"svgo": "^3.0.2",
+		"tsconfig": "workspace:*",
 		"typescript": "^5.0.4"
 	},
 	"react-native-builder-bob": {
@@ -31,11 +41,13 @@
 				}
 			],
 			"module",
-			"typescript"
+			[
+				"typescript",
+				{
+					"tsc": "../../../node_modules/.bin/tsc"
+				}
+			]
 		]
-	},
-	"dependencies": {
-		"tsconfig": "workspace:*"
 	},
 	"packageManager": "yarn@3.5.1"
 }
