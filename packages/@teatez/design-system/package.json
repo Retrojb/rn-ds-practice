@@ -27,7 +27,7 @@
 			[
 				"typescript",
 				{
-					"tsc": "../../node_modules/.bin/tsc"
+					"tsc": "../../../node_modules/.bin/tsc"
 				}
 			]
 		]

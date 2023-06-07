@@ -11,10 +11,17 @@ import {
 global.STORIES = [
   {
     titlePrefix: "",
-    directory: "./components",
-    files: "**/*.stories.?(ts|tsx|js|jsx)",
+    directory: "./src",
+    files: "**/_docs_/*.stories.mdx",
     importPathMatcher:
-      "^\\.[\\\\/](?:components(?:\\/(?!\\.)(?:(?:(?!(?:^|\\/)\\.).)*?)\\/|\\/|$)(?!\\.)(?=.)[^/]*?\\.stories\\.(?:ts|tsx|js|jsx)?)$",
+      "^\\.[\\\\/](?:src(?:\\/(?!\\.)(?:(?:(?!(?:^|\\/)\\.).)*?)\\/|\\/|$)_docs_\\/(?!\\.)(?=.)[^/]*?\\.stories\\.mdx)$",
+  },
+  {
+    titlePrefix: "",
+    directory: "./src",
+    files: "**/_stories_/*.stories.@(js|jsx|ts|tsx)",
+    importPathMatcher:
+      "^\\.[\\\\/](?:src(?:\\/(?!\\.)(?:(?:(?!(?:^|\\/)\\.).)*?)\\/|\\/|$)_stories_\\/(?!\\.)(?=.)[^/]*?\\.stories\\.(js|jsx|ts|tsx))$",
   },
 ];
 
@@ -48,7 +55,9 @@ try {
 } catch {}
 
 const getStories = () => {
-  return {};
+  return {
+    "./src/Button/_stories_/button.stories.tsx": require("../src/Button/_stories_/button.stories.tsx"),
+  };
 };
 
 configure(getStories, module, false);

@@ -12,9 +12,7 @@
 	],
 	"license": "UNLICESEND",
 	"private": true,
-	"scripts": {
-		"build": "bob build"
-	},
+	"scripts": {},
 	"dependencies": {
 		"@teatez-design-system/tokens": "workspace:*",
 		"@types/react": "^18.0.22",

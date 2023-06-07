@@ -13,7 +13,6 @@
 	"license": "UNLICESEND",
 	"private": true,
 	"scripts": {
-		"build": "bob build",
 		"lint": "eslint \"**/*.{js,ts,tsx}\""
 	},
 	"dependencies": {

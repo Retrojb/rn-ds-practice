@@ -22,14 +22,14 @@ const monoPkg = {
 		workspaceRoot,
 		'packages/@teatez-design-system/tokens'
 	),
-	'@teatez-design-system/typography': path.resolve(
-		workspaceRoot,
-		'packages/@teatez-design-system/typography'
-	),
-	'@teatez-design-system/components': path.resolve(
-		workspaceRoot,
-		'packages/@teatez-design-system/components'
-	),
+	// '@teatez-design-system/typography': path.resolve(
+	// 	workspaceRoot,
+	// 	'packages/@teatez-design-system/typography'
+	// ),
+	// '@teatez-design-system/components': path.resolve(
+	// 	workspaceRoot,
+	// 	'packages/@teatez-design-system/components'
+	// ),
 };
 
 defaultConfig.resolver.resolverMainFields = [
@@ -39,7 +39,6 @@ defaultConfig.resolver.resolverMainFields = [
 
 defaultConfig.watchFolders = [
 	projectRoot,
-	workspaceRoot,
 	'./.ondevice',
 	'./.storybook',
 	...Object.values(monoPkg),

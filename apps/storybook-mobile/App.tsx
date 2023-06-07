@@ -13,6 +13,7 @@ function App() {
 let AppEntryPoint = App;
 
 if (Constants.expoConfig?.extra?.storybookEnabled === 'true') {
+	// eslint-disable-next-line @typescript-eslint/no-unused-vars
 	AppEntryPoint = require('./.ondevice').default;
 }
 
