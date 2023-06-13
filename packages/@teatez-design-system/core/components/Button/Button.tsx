@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { ButtonProps } from '../../props';
 import { Pressable, StyleSheet, View, Text } from 'react-native';
 
-export const Button = ({}: ButtonProps) => {
+const Button = ({}: ButtonProps) => {
 	const [eventLog, updateEventLog] = useState([]);
 	const [isDisabled, setIsDisabled] = useState(false);
 	const [delay, setDelay] = useState(0);
@@ -27,3 +27,5 @@ const styles = StyleSheet.create({
 		width: '100%',
 	},
 });
+
+export default Button;

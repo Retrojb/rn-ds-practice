@@ -9,7 +9,8 @@
 			"@tokens": ["packages/@teatez-design-system/tokens"],
 			"@typography": ["packages/@teatez-design-system/typography"],
 			"@utils": ["packages/utils"]
-		}
-	},
+		},
+      "jsx": "react"
+    },
 	"exclude": ["node_modules", "storybook-static"]
 }
