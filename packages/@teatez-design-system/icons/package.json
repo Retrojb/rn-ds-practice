@@ -18,6 +18,10 @@
 		"build": "bob build",
 		"lint": "eslint \"**/*.{js,ts,tsx}\""
 	},
+	"dependencies": {
+		"react": "18.2.0",
+		"react-native": "0.71.8"
+	},
 	"devDependencies": {
 		"@svgr/core": "^8.0.0",
 		"@types/eslint": "^8",

@@ -10,11 +10,11 @@ function App() {
 	);
 }
 
-let AppEntryPoint = App;
+let AppEntryPoint: () => JSX.Element = App;
 
 if (Constants.expoConfig?.extra?.storybookEnabled === 'true') {
 	// eslint-disable-next-line @typescript-eslint/no-unused-vars
-	AppEntryPoint = require('./.ondevice').default;
+	AppEntryPoint = require('./.storybook').default;
 }
 
 const styles = StyleSheet.create({

@@ -1,4 +1,4 @@
-import { registerRootComponent } from 'expo';
+import { registerRootComponent } from './node_modules/expo';
 
 import App from './App';
 

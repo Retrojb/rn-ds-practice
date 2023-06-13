@@ -11,24 +11,15 @@ import {
 global.STORIES = [
   {
     titlePrefix: "",
-    directory: "./src",
-    files: "**/_docs_/*.stories.mdx",
+    directory: "./.storybook/stories",
+    files: "**/*.stories.?(ts|tsx|js|jsx)",
     importPathMatcher:
-      "^\\.[\\\\/](?:src(?:\\/(?!\\.)(?:(?:(?!(?:^|\\/)\\.).)*?)\\/|\\/|$)_docs_\\/(?!\\.)(?=.)[^/]*?\\.stories\\.mdx)$",
-  },
-  {
-    titlePrefix: "",
-    directory: "./src",
-    files: "**/_stories_/*.stories.@(js|jsx|ts|tsx)",
-    importPathMatcher:
-      "^\\.[\\\\/](?:src(?:\\/(?!\\.)(?:(?:(?!(?:^|\\/)\\.).)*?)\\/|\\/|$)_stories_\\/(?!\\.)(?=.)[^/]*?\\.stories\\.(js|jsx|ts|tsx))$",
+      "^\\.[\\\\/](?:\\.storybook\\/stories(?:\\/(?!\\.)(?:(?:(?!(?:^|\\/)\\.).)*?)\\/|\\/|$)(?!\\.)(?=.)[^/]*?\\.stories\\.(?:ts|tsx|js|jsx)?)$",
   },
 ];
 
 import "@storybook/addon-ondevice-controls/register";
 import "@storybook/addon-ondevice-actions/register";
-import "@storybook/addon-ondevice-backgrounds/register";
-import "@storybook/addon-ondevice-notes/register";
 
 import { argsEnhancers } from "@storybook/addon-actions/dist/modern/preset/addArgs";
 
@@ -56,7 +47,7 @@ try {
 
 const getStories = () => {
   return {
-    "./src/Button/_stories_/button.stories.tsx": require("../src/Button/_stories_/button.stories.tsx"),
+    "./.storybook/stories/Button/Button.stories.js": require("./stories/Button/Button.stories.js"),
   };
 };
 

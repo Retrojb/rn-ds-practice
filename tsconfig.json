@@ -1,0 +1,15 @@
+{
+	"extends": "tsconfig/base.json",
+	"compilerOptions": {
+		"baseUrl": "./",
+		"paths": {
+			"@components": ["packages/@teatez-design-system/components"],
+			"@icons": ["packages/@teatez-design-system/icons"],
+			"@core": ["packages/@teatez-design-system/core"],
+			"@tokens": ["packages/@teatez-design-system/tokens"],
+			"@typography": ["packages/@teatez-design-system/typography"],
+			"@utils": ["packages/utils"]
+		}
+	},
+	"exclude": ["node_modules", "storybook-static"]
+}

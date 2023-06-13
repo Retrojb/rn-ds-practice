@@ -1,6 +1,15 @@
 {
   "expo": {
     "name": "storybook-mobile",
-    "slug": "storybook-mobile"
+    "slug": "storybook-mobile-preview",
+    "extra": {
+      "eas": {
+        "projectId": "91f3aa1f-b798-4b5e-b9f7-079d14da929c"
+      }
+    },
+    "owner": "retrojb",
+    "ios": {
+      "bundleIdentifier": "com.retrojb.storybookmobilepreview"
+    }
   }
 }
