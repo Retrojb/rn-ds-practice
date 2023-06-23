@@ -6,15 +6,23 @@
 	"module": "lib/module/index.js",
 	"react-native": "src/index.ts",
 	"types": "lib/typescript/index.d.ts",
+	"source": "src/index.ts",
+	"publishConfig": {
+		"access": "public"
+	},
 	"files": [
-		"lib/",
-		"src/"
+		"lib",
+		"src"
 	],
 	"license": "UNLICESEND",
-	"private": true,
 	"scripts": {
 		"build": "bob build",
 		"lint": "eslint \"**/*.{js,ts,tsx}\""
+	},
+	"dependencies": {
+		"react": "^18.2.0",
+		"react-dom": "18.2.0",
+		"react-native": "^0.71.10"
 	},
 	"devDependencies": {
 		"@teatez-design-system/icons": "workspace:*",
@@ -22,7 +30,6 @@
 		"@types/react": "^18.0.22",
 		"eslint": "^7.32.0",
 		"eslint-config-custom": "workspace:*",
-		"react": "^18.2.0",
 		"tsconfig": "workspace:*",
 		"typescript": "5.0.4"
 	},
@@ -30,12 +37,7 @@
 		"source": "src",
 		"output": "lib",
 		"targets": [
-			[
-				"commonjs",
-				{
-					"copyFlow": true
-				}
-			],
+			"commonjs",
 			"module",
 			[
 				"typescript",

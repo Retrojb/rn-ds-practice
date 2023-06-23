@@ -18,15 +18,16 @@ global.STORIES = [
   },
   {
     titlePrefix: "",
-    directory: "../packages/@teatez-design-system/core/components",
-    files: "**/__stories__/*.stories.?(ts|tsx|js|jsx)",
+    directory: "../../packages/@teatez-design-system/core/components",
+    files: "**/__stories__/*.stories.?(js|jsx|ts|tsx)",
     importPathMatcher:
-      "^(?:\\.\\.\\/packages\\/@teatez-design-system\\/core\\/components(?:\\/(?!\\.)(?:(?:(?!(?:^|\\/)\\.).)*?)\\/|\\/|$)__stories__\\/(?!\\.)(?=.)[^/]*?\\.stories\\.(?:ts|tsx|js|jsx)?)$",
+      "^(?:\\.\\.\\/\\.\\.\\/packages\\/@teatez-design-system\\/core\\/components(?:\\/(?!\\.)(?:(?:(?!(?:^|\\/)\\.).)*?)\\/|\\/|$)__stories__\\/(?!\\.)(?=.)[^/]*?\\.stories\\.(?:js|jsx|ts|tsx)?)$",
   },
 ];
 
 import "@storybook/addon-ondevice-controls/register";
 import "@storybook/addon-ondevice-actions/register";
+import "@storybook/addon-ondevice-backgrounds/register";
 
 import { argsEnhancers } from "@storybook/addon-actions/dist/modern/preset/addArgs";
 
@@ -54,7 +55,9 @@ try {
 
 const getStories = () => {
   return {
+    "./.storybook/stories/Backgrounds/Background.stories.tsx": require("./stories/Backgrounds/Background.stories.tsx"),
     "./.storybook/stories/Button/Button.stories.js": require("./stories/Button/Button.stories.js"),
+    "./../../packages/@teatez-design-system/core/components/Button/__stories__/Button.stories.tsx": require("../../../packages/@teatez-design-system/core/components/Button/__stories__/Button.stories.tsx"),
   };
 };
 
