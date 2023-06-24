@@ -5,10 +5,13 @@
 	"type": "module",
 	"scripts": {
 		"lint": "eslint \"**/*.{js,ts,tsx}\"",
-		"clear-packages": "node src/module-cleaner.js"
+		"clear-packages": "node src/module-cleaner.js",
+		"create-component": "node src/creator-friend.js"
 	},
 	"devDependencies": {
+		"commander": "^11.0.0",
 		"eslint-config-custom": "workspace:*",
+		"mkdirp": "^3.0.1",
 		"tsconfig": "workspace:*"
 	},
 	"packageManager": "yarn@3.5.1"

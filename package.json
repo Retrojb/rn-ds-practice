@@ -19,6 +19,7 @@
 		"lint": "turbo run lint",
 		"format": "prettier --write \"**/*.{ts,tsx,md}\"",
 		"cleaner": "yarn workspace utils run clear-packages",
+		"create:component": "yarn workspace utils run create-component",
 		"typecheck": "tsc --noEmit",
 		"security": "audit-ci --config ./audit-ci.jsonc",
 		"postinstall": "patch-package"
