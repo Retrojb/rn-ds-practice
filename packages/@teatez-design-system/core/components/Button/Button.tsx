@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { ButtonProps } from '../../props';
 import { Pressable, StyleSheet, View, Text } from 'react-native';
 
-const Button = ({}: ButtonProps) => {
+const Button = ({ text }: ButtonProps) => {
 	const [eventLog, updateEventLog] = useState([]);
 	const [isDisabled, setIsDisabled] = useState(false);
 	const [delay, setDelay] = useState(0);
@@ -14,7 +14,7 @@ const Button = ({}: ButtonProps) => {
 				accessibilityHint="button"
 				disabled={isDisabled ? !isDisabled : true}
 			>
-				<Text>Press Me</Text>
+				<Text>{text}</Text>
 			</Pressable>
 		</View>
 	);

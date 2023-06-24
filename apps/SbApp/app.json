@@ -4,7 +4,6 @@
 		"slug": "SbApp",
 		"version": "1.0.0",
 		"orientation": "portrait",
-		"extra": { "storybookEnabled": "${process.env.STORYBOOK_ENABLED}" },
 		"icon": "./assets/icon.png",
 		"userInterfaceStyle": "light",
 		"splash": {
