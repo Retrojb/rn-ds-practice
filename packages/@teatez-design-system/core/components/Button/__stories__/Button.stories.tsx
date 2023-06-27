@@ -1,12 +1,13 @@
-import Button from '../Button';
+import { ComponentMeta, ComponentStory } from '@storybook/react-native';
+import React from 'react';
+import { Button } from '../Button';
 
 export default {
 	title: 'Button',
 	component: Button,
-};
-
-export const Base = {
 	args: {
-		text: 'I am button',
+		text: 'foo',
 	},
-};
+} as ComponentMeta<typeof Button>;
+
+export const Primary: ComponentStory<typeof Button> = () => <Button />;

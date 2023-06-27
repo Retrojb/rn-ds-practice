@@ -1,31 +1,29 @@
-import React, { useState } from 'react';
-import { ButtonProps } from '../../props';
-import { Pressable, StyleSheet, View, Text } from 'react-native';
+import React from 'react';
+import { TouchableOpacity, Text, StyleSheet } from 'react-native';
 
-const Button = ({ text }: ButtonProps) => {
-	const [eventLog, updateEventLog] = useState([]);
-	const [isDisabled, setIsDisabled] = useState(false);
-	const [delay, setDelay] = useState(0);
+type ButtonProps = {
+	onPress?: () => {};
+	text?: string;
+};
 
+export const Button = ({ onPress, text }: ButtonProps) => {
 	return (
-		<View>
-			<Pressable
-				role="button"
-				accessibilityHint="button"
-				disabled={isDisabled ? !isDisabled : true}
-			>
-				<Text>{text}</Text>
-			</Pressable>
-		</View>
+		<TouchableOpacity
+			style={styles.container}
+			onPress={onPress}
+			activeOpacity={0.8}
+		>
+			<Text style={styles.text}>{text}</Text>
+		</TouchableOpacity>
 	);
 };
 
 const styles = StyleSheet.create({
 	container: {
-		maxWidth: 500,
-		padding: '1rem',
-		width: '100%',
+		paddingHorizontal: 16,
+		paddingVertical: 8,
+		backgroundColor: 'purple',
+		borderRadius: 8,
 	},
+	text: { color: 'white' },
 });
-
-export default Button;
