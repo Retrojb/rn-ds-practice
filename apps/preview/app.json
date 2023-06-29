@@ -1,0 +1,44 @@
+{
+	"expo": {
+		"name": "preview",
+		"slug": "preview",
+		"version": "1.0.0",
+		"orientation": "portrait",
+		"icon": "./assets/icon.png",
+		"userInterfaceStyle": "light",
+		"splash": {
+			"image": "./assets/splash.png",
+			"resizeMode": "contain",
+			"backgroundColor": "#ffffff"
+		},
+		"assetBundlePatterns": ["**/*"],
+		"ios": {
+			"supportsTablet": true
+		},
+		"android": {
+			"adaptiveIcon": {
+				"foregroundImage": "./assets/adaptive-icon.png",
+				"backgroundColor": "#ffffff"
+			},
+			"package": "com.retrojb.preview"
+		},
+		"web": {
+			"favicon": "./assets/favicon.png"
+		},
+		"plugins": [
+			[
+				"expo-build-properties",
+				{
+					"ios": {
+						"flipper": true
+					}
+				}
+			]
+		],
+		"extra": {
+			"eas": {
+				"projectId": "ace3e010-9fe5-4d98-81d0-42f49dbe97ed"
+			}
+		}
+	}
+}

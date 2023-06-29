@@ -25,6 +25,8 @@
 		"postinstall": "patch-package"
 	},
 	"devDependencies": {
+		"@storybook/react": "6.5.16",
+		"@storybook/react-native": "^6.5.3",
 		"@turbo/gen": "1.9.7",
 		"eslint": "7.32.0",
 		"eslint-config-custom": "workspace:*",
@@ -58,5 +60,9 @@
 	},
 	"engines": {
 		"node": ">= 18.0.0"
+	},
+	"resolutions": {
+		"@base2/pretty-print-object": "1.0.2",
+        "json5": "2.2.3"
 	}
 }

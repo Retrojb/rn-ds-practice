@@ -1,6 +1,5 @@
 module.exports = {
 	extends: [
-		'next',
 		'turbo',
 		'prettier',
 		'@react-native-community',
@@ -28,10 +27,5 @@ module.exports = {
 	ignorePatterns: ['**/lib/**/*'],
 	globals: {
 		JSX: true,
-	},
-	parserOptions: {
-		babelOptions: {
-			presets: [require.resolve('next/babel')],
-		},
 	},
 };
