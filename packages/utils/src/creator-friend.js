@@ -75,6 +75,26 @@ const createProps = (componentName, fileExt) => {
 	);
 };
 
+const createStory = (componentName, fileExt) => {
+	const componentDir = path.resolve(componentPath, 'src/');
+	const storyDir = path.resolve(componentDir, `${componentName}`);
+
+	// if the dir doesn't exist create it
+	if (!fs.existsSync(storyDir)) {
+		console.log('not present');
+		console.log(componentName);
+		createDirectory(storyDir);
+	} else {
+		console.log('exists', componentDir);
+	}
+	fs.writeFileSync(
+		`${storyDir}/__stories__/${componentName}.stories.${fileExt}`,
+		`
+    export type ${componentName}Props = {
+    };
+    `
+	);
+};
 // if (options.file) {
 // 	createDirectory(process.argv[2], process.argv[3]);
 // }
